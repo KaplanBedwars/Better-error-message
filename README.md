@@ -9,7 +9,7 @@ Bu kod'u kurmak ve kullanmak çok basittir. İşte bazı örnekler:
 
 ## Çökme
 
-Bunun sayesinde herhangi bir çökme durumunda herşeyi görüntüler. Örnek kod aşşağıdaki gibidir.
+ Örnek kod aşşağıdaki gibidir.
 
 ```java
 package d;
@@ -38,7 +38,7 @@ public class d {
     
 ## Nasıl eklenir
 
-Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı indirin ardından src klasörünüze atın.
+Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java/dev/kaplanbedwars/erormessage) indirin ardından src klasörünüze atın.
 
 
 Kodunuzu açın ve şunu ekleyin:
