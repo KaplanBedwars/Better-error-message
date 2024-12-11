@@ -1,5 +1,5 @@
 ## Nedir?
-[(for the english version)](https://github.com/KaplanBedwars/Better-error-message/blob/main/README2.MD)) 
+[(for the english version)](https://github.com/KaplanBedwars/Better-error-message/blob/main/README2.MD)
 Sıkıcı hata mesajlarından sıkıldınızmı?
 Bu kolay ve basit kod tüm mesajı görüntüler.
 
