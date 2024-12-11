@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Crsashtest:jar">
+    <output-path>$PROJECT_DIR$/../../!PROJELER/!/Crsash test/out/artifacts/Crsashtest_jar</output-path>
+    <root id="archive" name="Crsashtest.jar">
+      <element id="module-output" name="Crsashtest" />
+    </root>
+  </artifact>
+</component>
