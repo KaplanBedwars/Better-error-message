@@ -38,7 +38,7 @@ public class d {
     
 ## Nasıl eklenir
 
-Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı [ [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java)  indirin ardından src klasörünüze atın.
+Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı  [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java)  indirin ardından src klasörünüze atın.
 
 
 Kodunuzu açın ve şunu ekleyin:
