@@ -9,7 +9,7 @@ Bu kod'u kurmak ve kullanmak çok basittir. İşte bazı örnekler:
 
 ## Çökme
 
-Bunun sayesinde herhangi bir çökme durumunda herşeyi görümtüler. Örnek kod aşşağıdaki gibidir.
+Bunun sayesinde herhangi bir çökme durumunda herşeyi görüntüler. Örnek kod aşşağıdaki gibidir.
 
 ```java
 package d;
