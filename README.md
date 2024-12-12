@@ -43,7 +43,7 @@ try {
     String str = null;
     str.length(); // NullPointerException oluşturur
 } catch (Exception e) {
-    EnhancedErrorLog.logError(e, "NullPointerException yakalandı.", "CRITICAL", "tr");
+    ErrorLog.logError(e, "NullPointerException yakalandı.", "CRITICAL", "tr");
 }
 
 
