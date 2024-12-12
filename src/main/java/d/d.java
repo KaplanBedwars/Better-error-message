@@ -2,6 +2,9 @@ package d;
 
 import dev.kaplanbedwars.erormessage.ErrorLog;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class d {
 
     public static void main(String[] args)  {
@@ -9,12 +12,20 @@ public class d {
           //ÖRNEK ÇÖKERTME KODU
 
         try {
-            // Potansiyel hata oluşturabilecek kod
-            int result = 10 / 0;  // Örnek hata
+            int[] array = new int[5];
+            int value = array[10]; // ArrayIndexOutOfBoundsException oluşturur
         } catch (Exception e) {
-            // ErrorLog kullanımı
-            ErrorLog.logError(e, "Olamaz!");
+            ErrorLog.logError(
+                    e,
+                    "Array index out of bounds.",
+                    "HIGH",
+                    "tr",
+                    "Operation", "Accessing array",
+                    "Index", "10"
+            );
         }
+
+
     }
 }
 
