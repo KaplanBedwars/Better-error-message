@@ -1,4 +1,4 @@
-What is ##?
+## What is ?
 [(for the english version)](https://github.com/KaplanBedwars/Better-error-message/blob/main/README2.MD)
 Tired of boring error messages?
 This easy and simple code displays the whole message.
