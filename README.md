@@ -9,7 +9,7 @@ Bu kod'u kurmak ve kullanmak çok basittir. İşte bazı örnekler:
 
 ## Çökme
 
- Örnek kod aşşağıdaki gibidir.
+En BASİT kod aşşağıdaki gibidir.
 
 ```java
 package d;
@@ -35,7 +35,127 @@ public class d {
 
   
 ```
-    
+
+Ama bitmedi!
+Daha fazla detay eklemek için:
+```java
+try {
+    String str = null;
+    str.length(); // NullPointerException oluşturur
+} catch (Exception e) {
+    EnhancedErrorLog.logError(e, "NullPointerException yakalandı.", "CRITICAL", "tr");
+}
+
+
+  
+```
+
+
+DAHADA İŞLERİ KIZIŞTIRMAK İÇİN
+
+
+```JAVA
+package d;
+
+import dev.kaplanbedwars.erormessage.ErrorLog;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class d {
+
+    public static void main(String[] args)  {
+
+          //ÖRNEK ÇÖKERTME KODU
+
+        try {
+            int[] array = new int[5];
+            int value = array[10]; // ArrayIndexOutOfBoundsException oluşturur
+        } catch (Exception e) {
+            ErrorLog.logError(
+                    e,
+                    "Array index out of bounds.",
+                    "HIGH",
+                    "ing",
+                    "Operation", "Accessing array",
+                    "Index", "10"
+            );
+        }
+
+
+    }
+}
+```
+
+**Açıklacaysak:**
+
+```java
+ErrorLog.logError(
+                    e, //ZORUNLU PARAMETRE
+                    "Array index out of bounds.", //ÖZEL  MESAJ
+                    "HIGH", //CİDDİYET
+                    "ing", //DİL
+                    "Operation", "Accessing array", // EK BİLGİLER KISMINA EKLENİR
+                    "Index", "10" //EK BİLGİLER KISMINA EKLENİR
+            );
+
+```
+
+
+**Ek bilgiler**
+
+```
+==== EK BİLGİLER ==== 
+Operation: Accessing array
+Index: 10
+```
+
+*Ayrıca kod, sistem özelliklerinide yazar.**
+
+
+```
+==== SİSTEM BİLGİLERİ ==== 
+java.specification.version: 22
+sun.cpu.isalist: amd64
+...
+
+```
+
+
+
+
+## Ciddiyiet
+
+`"CRITICAL"` kısmı ciddiyettir. El ile eklenir ve zorunlu değildir:
+
+
+| Parametre | Ciddiyiet     | 
+| :-------- | :------- | 
+| `LOW` | `Düşük` | 
+|`MEDIUM`    |     `Orta`    |
+| `HIGH` | `Yüksek` | 
+|   `CRITICAL`   |   `Kritik`      |
+
+
+Bu kısımlar logda böyle görünür:
+```txt
+==== HATA RAPORU ====
+// Sistem Hata Raporu
+Tarih: 2024-12-12 13:36:35
+Ciddiyet: Orta
+Özel Mesaj: Olamaz!
+
+```
+Eğer ingilizce yazdırırsanız:
+```
+    ==== ERROR REPORT ====
+// System Error Report
+Date: 2024-12-12 13:48:39
+Severity: CRITICAL
+Custom Message: NullPointerException yakalandı.
+
+```
+
 ## Nasıl eklenir
 
 Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı  [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java)  indirin ardından src klasörünüze atın.
@@ -81,43 +201,40 @@ Log dosyası **error_log.txt** olarak kayıt edilir ve konsola yazdırılır.
 
 
 ```log
+
 ==== HATA RAPORU ====
-// Olamaz, yine mi?
+// Sistem Hata Raporu
+Tarih: 2024-12-12 13:52:30
+Ciddiyet: HIGH
+Özel Mesaj: Array index out of bounds.
 
-Tarih: 2024-12-11 18:57:13
-Özel Mesaj: Olamaz!
+==== HATA DETAYLARI ==== 
+Hata Türü: java.lang.ArrayIndexOutOfBoundsException
+Hata Mesajı: Index 10 out of bounds for length 5
 
-==== HATA ====
+==== EK BİLGİLER ==== 
+Operation: Accessing array
+Index: 10
 
-Hata Türü: java.lang.ArithmeticException
-Hata Mesajı: / by zero
+==== SİSTEM BİLGİLERİ ==== 
+java.specification.version: 22
+sun.cpu.isalist: amd64
+...
 
-Yığın İzleme (Stack Trace):
-	at d.d.main(d.java:13)
 
-=====================
+==== ÇÖZÜM ÖNERİLERİ ==== 
+1. Hata mesajını inceleyerek kodunuzu kontrol edin.
+2. Daha fazla yardım için sistem yöneticinize veya geliştiriciye başvurun.
+==== YIĞIN İZLEME (STACK TRACE) ==== 
+	at d.d.main(d.java:16)
+
+========================
+
 
 ```
 
   
-## Log dosyası'nın açıkayın
-
-Log dosyası şu şekilde kayıt eder:
-
-```txt
-  Tarih: 2024-12-11 18:57:13 // Hatanın oluştuğu tarih.
-  
-  Özel Mesaj: Olamaz! //Kodda belirtilen özel mesaj. Örn: ErrorLog.logError(e, "Olamaz!");
-
-  ==== HATA ==== // Hatanın anlatıldığı bölüm.
-
-  Hata Türü: java.lang.ArithmeticException // Hata'nın türü
-
-  Hata Mesajı: / by zero // Hata mesajı. /by zero kısmı hata mesajıdır. Bu sizde farklıdır.
-
-  Yığın İzleme (Stack Trace):
-	at d.d.main(d.java:13) // Hatanın tam mesajı.
-```
+#
 
   
 ## Yazarlar ve Teşekkür
