@@ -43,7 +43,7 @@ try {
     String str = null;
     str.length(); // NullPointerException oluşturur
 } catch (Exception e) {
-    ErrorLog.logError(e, "NullPointerException yakalandı.", "CRITICAL", "tr");
+    EnhancedErrorLog.logError(e, "NullPointerException yakalandı.", "CRITICAL", "tr");
 }
 
 
@@ -54,7 +54,7 @@ try {
 DAHADA İŞLERİ KIZIŞTIRMAK İÇİN
 
 
-```JAVA
+```
 package d;
 
 import dev.kaplanbedwars.erormessage.ErrorLog;
@@ -89,7 +89,7 @@ public class d {
 
 **Açıklacaysak:**
 
-```java
+```
 ErrorLog.logError(
                     e, //ZORUNLU PARAMETRE
                     "Array index out of bounds.", //ÖZEL  MESAJ
@@ -110,16 +110,8 @@ Operation: Accessing array
 Index: 10
 ```
 
-*Ayrıca kod, sistem özelliklerinide yazar.**
+*Ayrıca sistem özelliklerinide yazar.**
 
-
-```
-==== SİSTEM BİLGİLERİ ==== 
-java.specification.version: 22
-sun.cpu.isalist: amd64
-...
-
-```
 
 
 
@@ -158,9 +150,10 @@ Custom Message: NullPointerException yakalandı.
 
 ## Nasıl eklenir
 
-Bu Class'ı eklemek çok basittir! İlk önce **dev.kaplanbedwars.erormessage**'ı  [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java)  indirin ardından src klasörünüze atın.
+İDEA için geliştirilen bu kütüphaneyi indirin [(İndirmek için)](https://github.com/KaplanBedwars/Better-error-message/releases/download/release-2024.12.20/erorlog.jar)  
+Ardından
 
-
+>` Project structure > Libraries > + > (jar) > OK `
 Kodunuzu açın ve şunu ekleyin:
 
 ```java
