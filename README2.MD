@@ -1,5 +1,4 @@
 ## What is ?
-[(for the english version)](https://github.com/KaplanBedwars/Better-error-message/blob/main/README2.MD)
 Tired of boring error messages?
 This easy and simple code displays the whole message.
 
@@ -43,7 +42,7 @@ try {
     String str = null;
     str.length(); // Generates NullPointerException
 } catch (Exception e) {
-    ErrorLog.logError(e, ‘NullPointerException caught.’, ‘CRITICAL’, ‘tr’);
+    EnhancedErrorLog.logError(e, ‘NullPointerException caught.’, ‘CRITICAL’, ‘tr’);
 }
 
 
@@ -54,7 +53,7 @@ try {
 TO ESCALATE THINGS FURTHER
 
 
-```JAVA
+```
 package d;
 
 import dev.kaplanbedwars.erormessage.ErrorLog;
@@ -87,9 +86,9 @@ public class d {
 }
 ```
 
-**Explanation:**
+**If we explain:**
 
-```java
+```
 ErrorLog.logError(
                     e, //MANDATORY PARAMETER
                     ‘Array index out of bounds.’, //SPECIAL MESSAGE
@@ -110,16 +109,8 @@ Operation: Accessing array
 Index: 10
 ```
 
-*The script also writes system properties.
+*Also writes system specifications.**
 
-
-```
-==== SYSTEM INFORMATION ==== 
-java.specification.version: 22
-sun.cpu.isalist: amd64
-...
-
-```
 
 
 
@@ -158,9 +149,10 @@ Custom Message: NullPointerException caught.
 
 ## How to add
 
-Adding this Class is very simple! First, download **dev.kaplanbedwars.erormessage** from [(To download)](https://github.com/KaplanBedwars/Better-error-message/tree/main/src/main/java), then put it in your src folder.
+Download this library developed for IDEA [(To download)](https://github.com/KaplanBedwars/Better-error-message/releases/download/release-2024.12.20/erorlog.jar)  
+Then
 
-
+>` Project structure > Libraries > + > (jar) > OK `
 Open your code and add the following:
 
 ```java
@@ -263,4 +255,3 @@ This project is used by the following companies:
 
   
 
-Translated with DeepL.com (free version)
