@@ -54,7 +54,7 @@ try {
 DAHADA İŞLERİ KIZIŞTIRMAK İÇİN
 
 
-```
+```java
 package d;
 
 import dev.kaplanbedwars.erormessage.ErrorLog;
@@ -89,7 +89,7 @@ public class d {
 
 **Açıklacaysak:**
 
-```
+```java
 ErrorLog.logError(
                     e, //ZORUNLU PARAMETRE
                     "Array index out of bounds.", //ÖZEL  MESAJ
